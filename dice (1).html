@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주사위 두 개 굴리기</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>주사위 두 개 굴리기</h1>
+    <button onclick="rollDice()">주사위 굴리기</button>
+    <div class="result" id="result"></div>
+
+    <script>
+        function rollDice() {
+            // 주사위 두 개 결과 생성
+            const dice1 = Math.floor(Math.random() * 6) + 1; // 첫 번째 주사위
+            const dice2 = Math.floor(Math.random() * 6) + 1; // 두 번째 주사위
+            const total = dice1 + dice2;
+
+            // 결과 출력
+            document.getElementById('result').textContent = 
+                `주사위 결과: 주사위 1 = ${dice1}, 주사위 2 = ${dice2}, 합계 = ${total}`;
+        }
+    </script>
+</body>
+</html>
